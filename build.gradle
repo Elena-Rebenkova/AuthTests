@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Selenium (обновлённая версия)
+    implementation 'org.seleniumhq.selenium:selenium-java:4.16.1'
+
+    // WebDriver Manager (обновлённая версия)
+    implementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
+
+    // JUnit 5 (обновлённая версия)
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
+    // Логирование SLF4J
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
